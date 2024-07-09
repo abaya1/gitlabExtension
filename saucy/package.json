@@ -19,6 +19,16 @@
           "type": "string",
           "default": "default value",
           "description": "api key"
+        },
+        "saucy.user": {
+          "type": "string",
+          "default": "default value",
+          "description": "user name"
+        },
+        "saucy.repoID": {
+          "type": "string",
+          "default": "default value",
+          "description": "Repository ID"
         }
       }
     },
