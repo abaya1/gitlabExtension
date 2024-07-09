@@ -12,6 +12,16 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+        "title": "Saucy",
+        "properties": {
+            "saucy.apiKey": {
+                "type": "string",
+                "default": "default value",
+                "description": "api key"
+            }
+        }
+    },
     "commands": [
       {
         "command": "saucy.helloWorld",
