@@ -1,5 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
+import axios from 'axios';
 import * as vscode from 'vscode';
 
 // This method is called when your extension is activated
@@ -16,10 +17,22 @@ export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.commands.registerCommand('saucy.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from saucy comments!');
+		vscode.window.showInformationMessage('Hello Tariq!');
+	});
+
+	const getDateToast = vscode.commands.registerCommand('saucy.getDateToast', () => {
+		// The code you place here will be executed every time your command is executed
+		// Display a message box to the user
+		const date = Date();
+
+		vscode.window.showInformationMessage(`The date is ${date}`);
 	});
 
 	context.subscriptions.push(disposable);
+	
+	axios.get("qewf;owqheilkcl");
+
+	context.subscriptions.push(getDateToast);
 }
 
 // This method is called when your extension is deactivated
