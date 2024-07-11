@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-import axios from 'axios';
 import * as vscode from 'vscode';
+import { GitService } from './git/git.service';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -28,10 +28,14 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 		vscode.window.showInformationMessage(`The date is ${date}`);
 	});
 
-	context.subscriptions.push(disposable);
-	
-	axios.get("qewf;owqheilkcl");
+	const getGit = vscode.commands.registerCommand('saucy.getGit', async () => {
+		const gitController = new GitService();
+		await gitController.init();
+		await gitController.getRepositoryInfo();
+		vscode.window.showInformationMessage(`The current branch is ${gitController.currentBranch}`);
+	});
 
+	context.subscriptions.push(disposable);
 	context.subscriptions.push(getDateToast);
 };
 
