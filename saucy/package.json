@@ -37,8 +37,8 @@
     },
     "commands": [
       {
-        "command": "saucy.helloWorld",
-        "title": "Hello World"
+        "command": "saucy.startSaucy",
+        "title": "Saucy"
       },
       {
         "command": "saucy.getDateToast",
