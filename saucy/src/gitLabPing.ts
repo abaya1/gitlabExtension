@@ -4,13 +4,13 @@ import { CONFIG } from "./shared/constants";
 
 export const getAllMRs = async (projectID:string, userAccessToken:string )=>{
     try {
-        const result:any = await axios.get(`${CONFIG.BASE_URL}/api/v4/projects/${projectID}/merge_requests`,{headers:{'PRIVATE-TOKEN': userAccessToken}});
+        const result:any = await axios.get(`${CONFIG.BASE_URL}/api/v4/projects/${projectID}/merge_requests?state=opened`,{headers:{'PRIVATE-TOKEN': userAccessToken}});
     if(result && result.data){
-        console.log(result);
+        console.log("getting MRs");
         return result.data;
     }
     } catch (error) {
-        return "API EPIC FAIL";
+        return " getAllMRsAPIEPICFAIL";
     }
  
 };
@@ -20,10 +20,10 @@ export const currentMRNotes = async (projectID:string, userAccessToken:string, m
     try {
         const result:any = await axios.get(`${CONFIG.BASE_URL}/api/v4/projects/${projectID}/merge_requests/${mergeRequestID}/notes`,{headers:{'PRIVATE-TOKEN': userAccessToken}});
     if(result && result.data){
-        console.log(result);
         return result.data;
     }
     } catch (error) {
-        return "API EPIC FAIL";
+        console.log("getting notes");
+        return "currentMRNotesAPIEPICFAIL";
     }
 };
