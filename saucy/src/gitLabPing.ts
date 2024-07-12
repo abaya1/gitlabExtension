@@ -10,7 +10,7 @@ export const getAllMRs = async (projectID:string, userAccessToken:string )=>{
         return result.data;
     }
     } catch (error) {
-        return "API EPIC FAIL";
+        return " getAllMRsAPIEPICFAIL";
     }
  
 };
@@ -24,6 +24,6 @@ export const currentMRNotes = async (projectID:string, userAccessToken:string, m
     }
     } catch (error) {
         console.log("getting notes");
-        return "API EPIC FAIL";
+        return "currentMRNotesAPIEPICFAIL";
     }
 };
