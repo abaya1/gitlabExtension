@@ -3,9 +3,6 @@ import * as vscode from 'vscode';
 export class DocumentDecorator {
    
     private _editor: vscode.TextEditor | undefined;
-	private _enabled: boolean = false;
-
-
 
     public decorate(startLine: number, endLine: number): void {
         this._editor = vscode.window.activeTextEditor;
