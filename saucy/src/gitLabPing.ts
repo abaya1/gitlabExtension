@@ -1,18 +1,6 @@
 //This file will handle the retrieval of data from gitlab
 import axios from "axios";
 
-enum apiKeys{
-    default = '',
-    mergeRequests = '',
-    mrComments = ''
-    
-}
-
-//Should be set from the settings page
-let userAccessToken = '';
-let repoID;
-let userName;
- 
 //TODO!!!
 export const getAllMRs = async (projectID:string, userAccessToken:string )=>{
     try {

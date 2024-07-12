@@ -22,21 +22,26 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 		await gitController.init();
 		await gitController.getRepositoryInfo();
 		const branch = gitController.currentBranch
+		let mergeRequestID : string ;
 
 
-		setInterval(async () => {
-			const test = await getAllMRs('34878733','glpat-5Y_QwysY6Gjg2xStQLpz');
-			test.forEach((element : any) => {
+		const mrPing = setInterval(async () => {
+			const mergeRequests = await getAllMRs('34878733','glpat-5Y_QwysY6Gjg2xStQLpz');
+			mergeRequests.forEach((element : any) => {
 				if(element.source_branch == branch) {
-					
+					mergeRequestID = element.iid
+					clearInterval(mrPing);
 				}
 			});
 		}, 1000)
 
-		
-
-
-		//vscode.window.showInformationMessage(`The current branch is ${branch}`);
+		const commentsPing = setInterval(async () => {
+			const comments = await currentMRNotes('34878733','glpat-5Y_QwysY6Gjg2xStQLpz', mergeRequestID);
+			comments.forEach((element : any) => {
+				if(element.type == "DiffNote")
+				vscode.window.showInformationMessage(element.body);
+			});
+		}, 1000)
 	});
 
 	context.subscriptions.push(main);
