@@ -41,8 +41,8 @@
         "title": "Saucy"
       },
       {
-        "command": "saucy.getDateToast",
-        "title": "getDateToast"
+        "command": "saucy.highlight",
+        "title": "Saucy > Highlight"
       }
     ]
   },

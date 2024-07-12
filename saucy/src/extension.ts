@@ -48,7 +48,12 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 		}, 1000);
 	});
 
+	const highlight = vscode.commands.registerCommand('saucy.highlight', async () => {
+		console.log('highlight');
+	});
+
 	context.subscriptions.push(main);
+	context.subscriptions.push(highlight);
 };
 
 // This method is called when your extension is deactivated
