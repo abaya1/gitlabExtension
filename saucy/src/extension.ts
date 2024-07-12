@@ -25,8 +25,6 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 		const branch = gitController.currentBranch;
 		let mergeRequestID : string ;
 
-		// user access token 'glpat-5Y_QwysY6Gjg2xStQLpz'
-		// project id '34878733'
 		const mrPing = setInterval(async () => {
 			const mergeRequests = await getAllMRs(CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN);
 			mergeRequests.forEach((element : any) => {
@@ -35,17 +33,17 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 					clearInterval(mrPing);
 				}
 			});
-		}, 1000);
+		}, 10000)
 
 		const commentsPing = setInterval(async () => {
 			const comments = await currentMRNotes(CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN, mergeRequestID);
 			comments.forEach((element : any) => {
-				if(element.type === "DiffNote"){
+				if(element.type == "DiffNote") {
+					//display and highlight lines with comments
 					vscode.window.showInformationMessage(element.body);
 				}
-				
 			});
-		}, 1000);
+		}, 10000)
 	});
 
 	context.subscriptions.push(main);

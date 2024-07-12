@@ -8,6 +8,9 @@ export class GitService {
     public async init(): Promise<void> {
         this._gitApi = await this._getGitAPI();
         this._currentBranch = await this._getCurrentBranch();
+        this._gitApi.onDidChangeState(() => {
+            console.log('changed-------')
+        })
     }
 
     public async getRepositoryInfo(): Promise<Repository | undefined> {
