@@ -8,17 +8,21 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 	console.log('Congratulations, your extension "saucy" is now active!');
 	const gitController = new GitService();
 	await gitController.init(context.subscriptions);
-	let commentsList = new Map<string, {resolved: string, lines: {} }> 
+	let branch : string | undefined = ''
+	let commentsList = new Map<string, {resolved: string, position: {}}> 
 
 	const main = vscode.commands.registerCommand('saucy.startSaucy', async () => {
 		let mergeRequestID : string = '' ;
 
 		const mrPing = setInterval(async () => {
 			const mergeRequests = await getAllMRs(CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN);
-
+			console.log(commentsList)
 			if(mergeRequests &&mergeRequests!=="getAllMRsAPIEPICFAIL"){
 				await gitController.getRepositoryInfo();
-				const branch = gitController.currentBranch;
+				if(branch != gitController.currentBranch ) {
+					branch = gitController.currentBranch;
+					commentsList.clear();
+				} 
 				console.log(branch);
 				console.log(mergeRequests);
 				mergeRequests.forEach((element : any) => {
@@ -42,8 +46,8 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 							}
 							else {
 								if(!commentsList.has(element.id)) {
-									//display toast
-									commentsList.set(element.id, {resolved: element.resolved, lines: element.line_range})
+									vscode.window.showInformationMessage('you have received a new comment 🤨')
+									commentsList.set(element.id, {resolved: element.resolved, position: element.position})
 								}
 							} 
 						}
