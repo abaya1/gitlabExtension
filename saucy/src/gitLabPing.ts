@@ -30,6 +30,4 @@ export const currentMRNotes = async (projectID:string, userAccessToken:string, m
     }
     
  
- 
- 
 };

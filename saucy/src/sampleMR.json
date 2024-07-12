@@ -1,0 +1,994 @@
+[
+    {
+        "id": 1977403170,
+        "type": null,
+        "body": "mentioned in commit d06db9545cc6d655690c8e3e171adb360e4d1f60",
+        "attachment": null,
+        "author": {
+            "id": 11244319,
+            "username": "Bobby.Kingsada",
+            "name": "Bobby Kingsada",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/58f2ff6e16fd42c7e0fd0bf9764552079cfbc2d4d415bb29783f5e647e4e1058?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Bobby.Kingsada"
+        },
+        "created_at": "2024-07-01T19:19:14.999Z",
+        "updated_at": "2024-07-01T19:19:15.009Z",
+        "system": true,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "resolvable": false,
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1977370017,
+        "type": null,
+        "body": "approved this merge request",
+        "attachment": null,
+        "author": {
+            "id": 11244321,
+            "username": "Erick.Wakayu",
+            "name": "Erick Wakayu",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/11244321/avatar.png",
+            "web_url": "https://gitlab.com/Erick.Wakayu"
+        },
+        "created_at": "2024-07-01T19:04:16.897Z",
+        "updated_at": "2024-07-01T19:04:16.911Z",
+        "system": true,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "resolvable": false,
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1977327070,
+        "type": null,
+        "body": "resolved all threads",
+        "attachment": null,
+        "author": {
+            "id": 11244321,
+            "username": "Erick.Wakayu",
+            "name": "Erick Wakayu",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/11244321/avatar.png",
+            "web_url": "https://gitlab.com/Erick.Wakayu"
+        },
+        "created_at": "2024-07-01T18:38:27.737Z",
+        "updated_at": "2024-07-01T18:38:27.749Z",
+        "system": true,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "resolvable": false,
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1977324053,
+        "type": "DiffNote",
+        "body": "not going to be able to do that this sprint. Will split for testing.",
+        "attachment": null,
+        "author": {
+            "id": 11244319,
+            "username": "Bobby.Kingsada",
+            "name": "Bobby Kingsada",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/58f2ff6e16fd42c7e0fd0bf9764552079cfbc2d4d415bb29783f5e647e4e1058?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Bobby.Kingsada"
+        },
+        "created_at": "2024-07-01T18:36:22.092Z",
+        "updated_at": "2024-07-01T18:38:27.699Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1365,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1365",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1365
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1365",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1365
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 11244321,
+            "username": "Erick.Wakayu",
+            "name": "Erick Wakayu",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/11244321/avatar.png",
+            "web_url": "https://gitlab.com/Erick.Wakayu"
+        },
+        "resolved_at": "2024-07-01T18:38:27.699Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1977248881,
+        "type": null,
+        "body": "approved this merge request",
+        "attachment": null,
+        "author": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "created_at": "2024-07-01T17:35:33.738Z",
+        "updated_at": "2024-07-01T17:35:33.763Z",
+        "system": true,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "resolvable": false,
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1977246694,
+        "type": "DiffNote",
+        "body": "@Bobby.Kingsada another re render is making the state of ssnvalid true before it hits the onfocus. Since it works as is, I am going to resolve this thread, but this is something we have to come back later, when we refactor",
+        "attachment": null,
+        "author": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "created_at": "2024-07-01T17:33:48.235Z",
+        "updated_at": "2024-07-01T17:33:49.037Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "resolved_at": "2024-07-01T17:33:49.037Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1976990302,
+        "type": "DiffNote",
+        "body": "No issue with your code at all, but please write thorough test(s) for this change. Take into account test coverage before & after, because we need to refactor this component of the codebase in the near future\n\nCC @EFeuerstein",
+        "attachment": null,
+        "author": {
+            "id": 11244321,
+            "username": "Erick.Wakayu",
+            "name": "Erick Wakayu",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/11244321/avatar.png",
+            "web_url": "https://gitlab.com/Erick.Wakayu"
+        },
+        "created_at": "2024-07-01T15:47:19.186Z",
+        "updated_at": "2024-07-01T18:38:27.699Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1365,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1365",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1365
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1365",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1365
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 11244321,
+            "username": "Erick.Wakayu",
+            "name": "Erick Wakayu",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/11244321/avatar.png",
+            "web_url": "https://gitlab.com/Erick.Wakayu"
+        },
+        "resolved_at": "2024-07-01T18:38:27.699Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1976961906,
+        "type": "DiffNote",
+        "body": "I'll try and implement",
+        "attachment": null,
+        "author": {
+            "id": 11244319,
+            "username": "Bobby.Kingsada",
+            "name": "Bobby Kingsada",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/58f2ff6e16fd42c7e0fd0bf9764552079cfbc2d4d415bb29783f5e647e4e1058?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Bobby.Kingsada"
+        },
+        "created_at": "2024-07-01T15:40:34.640Z",
+        "updated_at": "2024-07-01T17:33:49.037Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "resolved_at": "2024-07-01T17:33:49.037Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1976945828,
+        "type": "DiffNote",
+        "body": "yes we can, rest of the fields do it also on focus  is in the handleEvents function\n\n```\nconst handleEvents = (event: any, input?: string, inputValid?: boolean, setValid?: (val: boolean) => void) => {\n        const eventType = event.type;\n        const inputName = input || event.target.name;\n        if (eventType === 'focus') {\n            if (setValid) {\n                setValid(true);\n            }\n            handleGreenCheck(inputName, false);\n        }\n        if (eventType === 'blur') {\n            if (inputValid !== undefined) {\n                handleGreenCheck(inputName, inputValid);\n            }\n        }\n    };\n```",
+        "attachment": null,
+        "author": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "created_at": "2024-07-01T15:36:39.883Z",
+        "updated_at": "2024-07-01T17:33:49.037Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "resolved_at": "2024-07-01T17:33:49.037Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1976931701,
+        "type": "DiffNote",
+        "body": "We can not. In all other text fields this is on change.",
+        "attachment": null,
+        "author": {
+            "id": 11244319,
+            "username": "Bobby.Kingsada",
+            "name": "Bobby Kingsada",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/58f2ff6e16fd42c7e0fd0bf9764552079cfbc2d4d415bb29783f5e647e4e1058?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Bobby.Kingsada"
+        },
+        "created_at": "2024-07-01T15:33:20.303Z",
+        "updated_at": "2024-07-01T17:33:49.037Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "resolved_at": "2024-07-01T17:33:49.037Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974139281,
+        "type": "DiffNote",
+        "body": "@Bobby.Kingsada maybe we could set the ssnvalid in the onFocus event",
+        "attachment": null,
+        "author": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "created_at": "2024-06-28T23:01:57.541Z",
+        "updated_at": "2024-07-01T17:33:49.037Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "resolved_at": "2024-07-01T17:33:49.037Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974130879,
+        "type": null,
+        "body": "approved this merge request",
+        "attachment": null,
+        "author": {
+            "id": 11857113,
+            "username": "Harrison.Su1",
+            "name": "Harrison Su",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/61aceaa3505fae718bbe9b00e3b6eb9248f89ca99c8c11620c5ee5f63a2b2491?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Harrison.Su1"
+        },
+        "created_at": "2024-06-28T22:54:56.293Z",
+        "updated_at": "2024-06-28T22:54:56.306Z",
+        "system": true,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "resolvable": false,
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974125161,
+        "type": null,
+        "body": "resolved all threads",
+        "attachment": null,
+        "author": {
+            "id": 9786560,
+            "username": "Cody.Molisee",
+            "name": "Cody Molisee",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786560/avatar.png",
+            "web_url": "https://gitlab.com/Cody.Molisee"
+        },
+        "created_at": "2024-06-28T22:35:42.783Z",
+        "updated_at": "2024-06-28T22:35:42.794Z",
+        "system": true,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "resolvable": false,
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974124007,
+        "type": "DiffNote",
+        "body": "Looks like the other components are using the setValue prop to update the error state however the prop is just using onChange in the background to update. Updating to use setValue has the same amount of rerenders and I dont think it would improve optimization.![Screenshot_2024-06-28_at_3.33.12_PM](/uploads/cdf13d2c5315894b72d8b057093e049f/Screenshot_2024-06-28_at_3.33.12_PM.png)",
+        "attachment": null,
+        "author": {
+            "id": 11244319,
+            "username": "Bobby.Kingsada",
+            "name": "Bobby Kingsada",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/58f2ff6e16fd42c7e0fd0bf9764552079cfbc2d4d415bb29783f5e647e4e1058?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Bobby.Kingsada"
+        },
+        "created_at": "2024-06-28T22:31:47.579Z",
+        "updated_at": "2024-07-01T17:33:49.037Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "resolved_at": "2024-07-01T17:33:49.037Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974071839,
+        "type": "DiffNote",
+        "body": "I asked Chris for clarification and he wants it like this \n\"what it does now on prod is, on focus, error remains, as soon as they start typing it goes away\"\nI can put logic on focus but it would conflict with these instructions",
+        "attachment": null,
+        "author": {
+            "id": 11244319,
+            "username": "Bobby.Kingsada",
+            "name": "Bobby Kingsada",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/58f2ff6e16fd42c7e0fd0bf9764552079cfbc2d4d415bb29783f5e647e4e1058?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Bobby.Kingsada"
+        },
+        "created_at": "2024-06-28T21:17:27.590Z",
+        "updated_at": "2024-07-01T17:33:49.037Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "resolved_at": "2024-07-01T17:33:49.037Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974065270,
+        "type": "DiffNote",
+        "body": "@Bobby.Kingsada Regarding the previous question @Tariq.Shams asked. The criteria is not to check on every character update. the criteria is to remove error state if we are editing the field. We only check validity on blur.\n\ntherefore when we are not on blur (i.e. on focus) then we should only be removing the error state.",
+        "attachment": null,
+        "author": {
+            "id": 9786560,
+            "username": "Cody.Molisee",
+            "name": "Cody Molisee",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786560/avatar.png",
+            "web_url": "https://gitlab.com/Cody.Molisee"
+        },
+        "created_at": "2024-06-28T21:08:03.343Z",
+        "updated_at": "2024-07-01T17:33:49.037Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 9786259,
+            "username": "Ainhoa.Martinez",
+            "name": "Ainhoa Martinez",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/9786259/avatar.png",
+            "web_url": "https://gitlab.com/Ainhoa.Martinez"
+        },
+        "resolved_at": "2024-07-01T17:33:49.037Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974049267,
+        "type": null,
+        "body": "resolved all threads",
+        "attachment": null,
+        "author": {
+            "id": 15312362,
+            "username": "Tariq.Shams",
+            "name": "Tariq Shams",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/5c21bd63c4496c256945299476bd612632339db42dfed1ec75f81bc1280fd4e5?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Tariq.Shams"
+        },
+        "created_at": "2024-06-28T20:43:23.717Z",
+        "updated_at": "2024-06-28T20:43:23.727Z",
+        "system": true,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "resolvable": false,
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974048429,
+        "type": "DiffNote",
+        "body": "We want the validation to happen on character change as per acceptance Criteria",
+        "attachment": null,
+        "author": {
+            "id": 11244319,
+            "username": "Bobby.Kingsada",
+            "name": "Bobby Kingsada",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/58f2ff6e16fd42c7e0fd0bf9764552079cfbc2d4d415bb29783f5e647e4e1058?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Bobby.Kingsada"
+        },
+        "created_at": "2024-06-28T20:41:53.834Z",
+        "updated_at": "2024-06-28T20:43:36.994Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 15312362,
+            "username": "Tariq.Shams",
+            "name": "Tariq Shams",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/5c21bd63c4496c256945299476bd612632339db42dfed1ec75f81bc1280fd4e5?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Tariq.Shams"
+        },
+        "resolved_at": "2024-06-28T20:43:23.684Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974048046,
+        "type": null,
+        "body": "resolved all threads",
+        "attachment": null,
+        "author": {
+            "id": 15312362,
+            "username": "Tariq.Shams",
+            "name": "Tariq Shams",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/5c21bd63c4496c256945299476bd612632339db42dfed1ec75f81bc1280fd4e5?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Tariq.Shams"
+        },
+        "created_at": "2024-06-28T20:41:17.863Z",
+        "updated_at": "2024-06-28T20:41:17.874Z",
+        "system": true,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "resolvable": false,
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    },
+    {
+        "id": 1974043647,
+        "type": "DiffNote",
+        "body": "just curious is there a reason why we wouldn't just have the invalid state disabled while the field is focused as opposed to having this function run on every character change?",
+        "attachment": null,
+        "author": {
+            "id": 15312362,
+            "username": "Tariq.Shams",
+            "name": "Tariq Shams",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/5c21bd63c4496c256945299476bd612632339db42dfed1ec75f81bc1280fd4e5?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Tariq.Shams"
+        },
+        "created_at": "2024-06-28T20:34:13.125Z",
+        "updated_at": "2024-06-28T20:43:23.684Z",
+        "system": false,
+        "noteable_id": 311832776,
+        "noteable_type": "MergeRequest",
+        "project_id": 34878733,
+        "commit_id": null,
+        "position": {
+            "base_sha": "5c239fee2fa2ce503958a8bb48b270f789bb2595",
+            "start_sha": "5fd8ab4406b0c5a397ad62b35fab68a17a36be1c",
+            "head_sha": "6e09f086b3a1c91800f032005c2f4828d06c36a4",
+            "old_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "new_path": "ui.frontend/src/components/ApplicationVerification/forms/PersonalInformation.tsx",
+            "position_type": "text",
+            "old_line": null,
+            "new_line": 1367,
+            "line_range": {
+                "start": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                },
+                "end": {
+                    "line_code": "8622ff10064dfbeaa47ec7495218a5c753173512_1365_1367",
+                    "type": "new",
+                    "old_line": null,
+                    "new_line": 1367
+                }
+            }
+        },
+        "resolvable": true,
+        "resolved": true,
+        "resolved_by": {
+            "id": 15312362,
+            "username": "Tariq.Shams",
+            "name": "Tariq Shams",
+            "state": "active",
+            "locked": false,
+            "avatar_url": "https://secure.gravatar.com/avatar/5c21bd63c4496c256945299476bd612632339db42dfed1ec75f81bc1280fd4e5?s=80&d=identicon",
+            "web_url": "https://gitlab.com/Tariq.Shams"
+        },
+        "resolved_at": "2024-06-28T20:43:23.684Z",
+        "confidential": false,
+        "internal": false,
+        "imported": false,
+        "imported_from": "none",
+        "noteable_iid": 2833,
+        "commands_changes": {}
+    }
+]
