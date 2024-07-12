@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import { GitService } from './git/git.service';
+import { currentMRNotes, getAllMRs } from './gitLabPing';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -20,7 +21,13 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 		const gitController = new GitService();
 		await gitController.init();
 		await gitController.getRepositoryInfo();
-		vscode.window.showInformationMessage(`The current branch is ${gitController.currentBranch}`);
+		const branch = gitController.currentBranch
+
+		const test = await getAllMRs('34878733','glpat-5Y_QwysY6Gjg2xStQLpz');
+		vscode.window.showInformationMessage(String(test));
+
+
+		//vscode.window.showInformationMessage(`The current branch is ${branch}`);
 	});
 
 	context.subscriptions.push(main);
