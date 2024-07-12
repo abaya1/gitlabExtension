@@ -21,6 +21,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 				await gitController.getRepositoryInfo();
 				if(branch != gitController.currentBranch ) {
 					branch = gitController.currentBranch;
+					mergeRequestID = ''
 					commentsList.clear();
 				} 
 				console.log(branch);
