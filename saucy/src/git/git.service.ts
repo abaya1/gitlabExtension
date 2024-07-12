@@ -5,12 +5,9 @@ export class GitService {
     private _gitApi: API | undefined;
     private _currentBranch: string | undefined;
 
-    public async init(): Promise<void> {
+    public async init(context: any[]): Promise<void> {
         this._gitApi = await this._getGitAPI();
-        this._currentBranch = await this._getCurrentBranch();
-        this._gitApi.onDidChangeState(() => {
-            console.log('changed-------')
-        })
+        this._currentBranch = await this._getCurrentBranch();        
     }
 
     public async getRepositoryInfo(): Promise<Repository | undefined> {
@@ -19,6 +16,8 @@ export class GitService {
         }
         const uri = await this._gitApi.repositories[0];
         console.log(uri);
+        console.log(this._gitApi)
+        this._currentBranch = await this._getCurrentBranch(); 
         return;
     }
 
