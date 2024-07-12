@@ -1,7 +1,6 @@
 //This file will handle the retrieval of data from gitlab
 import axios from "axios";
 
-//TODO!!!
 export const getAllMRs = async (projectID:string, userAccessToken:string )=>{
     try {
         const result:any = await axios.get(`https://gitlab.com/api/v4/projects/${projectID}/merge_requests`,{headers:{'PRIVATE-TOKEN': userAccessToken}});
@@ -10,8 +9,8 @@ export const getAllMRs = async (projectID:string, userAccessToken:string )=>{
         return result.data;
     }
     } catch (error) {
-        return "API EPIC FAIL";
         console.log(error);
+        return "API EPIC FAIL";
     }
  
 };
@@ -25,9 +24,7 @@ export const currentMRNotes = async (projectID:string, userAccessToken:string, m
         return result.data;
     }
     } catch (error) {
-        return "API EPIC FAIL";
         console.log(error);
+        return "API EPIC FAIL";
     }
-    
- 
 };
