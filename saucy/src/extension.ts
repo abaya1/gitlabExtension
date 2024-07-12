@@ -23,8 +23,17 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 		await gitController.getRepositoryInfo();
 		const branch = gitController.currentBranch
 
-		const test = await getAllMRs('34878733','glpat-5Y_QwysY6Gjg2xStQLpz');
-		vscode.window.showInformationMessage(String(test));
+
+		setInterval(async () => {
+			const test = await getAllMRs('34878733','glpat-5Y_QwysY6Gjg2xStQLpz');
+			test.forEach((element : any) => {
+				if(element.source_branch == branch) {
+					
+				}
+			});
+		}, 1000)
+
+		
 
 
 		//vscode.window.showInformationMessage(`The current branch is ${branch}`);
