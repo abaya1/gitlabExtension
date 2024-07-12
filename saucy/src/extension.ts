@@ -4,6 +4,7 @@ import * as vscode from 'vscode';
 import { GitService } from './git/git.service';
 import { currentMRNotes, getAllMRs } from './gitLabPing';
 import { CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN } from './shared/constants';
+import { DocumentDecorator } from './models/editor/decorator';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -49,8 +50,10 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 	});
 
 	const highlight = vscode.commands.registerCommand('saucy.highlight', async () => {
-		console.log('highlight');
+		const decorator = new DocumentDecorator();
+		//decorator.decorate(1, 10);
 	});
+
 
 	context.subscriptions.push(main);
 	context.subscriptions.push(highlight);
