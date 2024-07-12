@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import { GitService } from './git/git.service';
 import { currentMRNotes, getAllMRs } from './gitLabPing';
+import { CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN } from './shared/constants';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -24,9 +25,10 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 		const branch = gitController.currentBranch;
 		let mergeRequestID : string ;
 
-
+		// user access token 'glpat-5Y_QwysY6Gjg2xStQLpz'
+		// project id '34878733'
 		const mrPing = setInterval(async () => {
-			const mergeRequests = await getAllMRs('34878733','glpat-5Y_QwysY6Gjg2xStQLpz');
+			const mergeRequests = await getAllMRs(CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN);
 			mergeRequests.forEach((element : any) => {
 				if(element.source_branch === branch) {
 					mergeRequestID = element.iid;
@@ -36,7 +38,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 		}, 1000);
 
 		const commentsPing = setInterval(async () => {
-			const comments = await currentMRNotes('34878733','glpat-5Y_QwysY6Gjg2xStQLpz', mergeRequestID);
+			const comments = await currentMRNotes(CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN, mergeRequestID);
 			comments.forEach((element : any) => {
 				if(element.type === "DiffNote"){
 					vscode.window.showInformationMessage(element.body);

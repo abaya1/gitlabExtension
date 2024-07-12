@@ -23,10 +23,10 @@
           "default": "default value",
           "description": "api key"
         },
-        "saucy.user": {
+        "saucy.userAccessToken": {
           "type": "string",
           "default": "default value",
-          "description": "user name"
+          "description": "User Access Token"
         },
         "saucy.repoID": {
           "type": "string",
