@@ -16,7 +16,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
     const gitController = new GitService();
     await gitController.init(context.subscriptions);
     let branch: string | undefined = '';
-    let commentsList = new Map<string, { resolved: string; position: {} }>();
+    let commentsList = new Map<string, { resolved: string; position: PositionType }>();
 
     const gitLabService = new GitLabService(CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN);
 
@@ -70,7 +70,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
     const highlight = vscode.commands.registerCommand('saucy.highlight', async () => {
         const decorator = new DocumentDecorator();
         commentsList.forEach(comment => {
-            decorator.decorate(comment.position.line, comment.position.character);
+            decorator.decorate(comment.position.new_line || 0, comment.position.old_line || Number.MAX_SAFE_INTEGER);
         });
     });
 
