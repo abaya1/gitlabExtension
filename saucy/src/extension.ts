@@ -25,7 +25,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 
         const mrPing = setInterval(async () => {
             const mergeRequests = await gitLabService.getAllMRs();
-            console.log(commentsList);
+            console.log('MRping comments',commentsList);
             if (mergeRequests && mergeRequests !== "getAllMRsAPIEPICFAIL") {
                 await gitController.getRepositoryInfo();
                 if (branch !== gitController.currentBranch) {
@@ -47,14 +47,14 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
         const commentsPing = setInterval(async () => {
             if (mergeRequestID !== '') {
                 const comments = await gitLabService.currentMRNotes(mergeRequestID);
-                console.log(comments);
+                console.log('comments:', comments);
                 if (comments && comments.length > 0 && comments !== "currentMRNotesAPIEPICFAIL") {
                     comments.forEach((element: any) => {
                         if (element.type === "DiffNote" && element.resolvable) {
                             if (element.resolved && commentsList.has(element.id)) {
                                 commentsList.delete(element.id);
                             } else {
-                                if (!commentsList.has(element.id)) {
+                                if (!element.resolved && !commentsList.has(element.id)) {
                                     vscode.window.showInformationMessage('you have received a new comment 🤨');
                                     commentsList.set(element.id, { resolved: element.resolved, position: element.position });
                                     commentsUpdateEmitter.emit('commentsUpdated');
@@ -70,7 +70,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
     const highlight = vscode.commands.registerCommand('saucy.highlight', async () => {
         const decorator = new DocumentDecorator();
         commentsList.forEach(comment => {
-            decorator.decorate(comment.position.new_line || 0, comment.position.old_line || Number.MAX_SAFE_INTEGER);
+            decorator.decorate(comment.position.line_range.start.new_line || 0, comment.position.line_range.end.new_line || comment.position.line_range.start.new_line);
         });
     });
 
