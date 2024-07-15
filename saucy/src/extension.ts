@@ -3,7 +3,7 @@ import { GitService } from './services/git/git.service';
 import { GitLabService } from './services/gitlab/gitlab.service';
 import { CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN } from './shared/constants';
 // user access token 'glpat-5Y_QwysY6Gjg2xStQLpz'
-		// project id '34878733'
+// project id '34878733'
 
 export const activate = async (context: vscode.ExtensionContext): Promise<void> => {
 
