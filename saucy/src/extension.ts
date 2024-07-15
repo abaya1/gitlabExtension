@@ -51,11 +51,13 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
                 if (comments && comments.length > 0 && comments !== "currentMRNotesAPIEPICFAIL") {
                     comments.forEach((element: any) => {
                         if (element.type === "DiffNote" && element.resolvable) {
+                            const file = element.position.new_path.split('/').pop();
                             if (element.resolved && commentsList.has(element.id)) {
                                 commentsList.delete(element.id);
+                                vscode.window.showInformationMessage(`a comment has been resolved 🥵 \n ${file}`);
                             } else {
                                 if (!element.resolved && !commentsList.has(element.id)) {
-                                    vscode.window.showInformationMessage('you have received a new comment 🤨');
+                                    vscode.window.showInformationMessage(`you have received a new comment 🤨 \n ${file}`);
                                     commentsList.set(element.id, { resolved: element.resolved, position: element.position });
                                     commentsUpdateEmitter.emit('commentsUpdated');
                                 }
