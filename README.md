@@ -13,6 +13,10 @@ the code on this line will show the actual text of the comments.
 **Switching branches will auto check for the new branch.**
 
 
+# Contributors
+Arron Abay
+Juan Echevarria
+Tariq Shams
 
 
 
