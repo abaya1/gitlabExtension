@@ -1,7 +1,9 @@
 import * as vscode from 'vscode';
 
 const highlightDecoration = vscode.window.createTextEditorDecorationType({
-    backgroundColor: 'rgba(123, 45, 67, 0.8)',
+    backgroundColor: new vscode.ThemeColor('editor.findMatchBackground'),
+    overviewRulerLane: vscode.OverviewRulerLane.Full,
+	rangeBehavior: vscode.DecorationRangeBehavior.OpenOpen,
     isWholeLine: true,
 });
 
@@ -18,7 +20,8 @@ export class DocumentDecorator {
         const range = new vscode.Range(startLine - 1, 0, endLine - 1, Number.MAX_VALUE);
         const decorationOption: vscode.DecorationOptions = {
             range,
-            hoverMessage: textContent
+            hoverMessage: textContent,
+            //renderOptions: {}
         };
 
         const existingDecorations = this._decoratedEditors.get(activeEditor) || [];

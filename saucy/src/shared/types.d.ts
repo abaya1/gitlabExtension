@@ -27,19 +27,20 @@ interface PositionType {
     };
 }
 
+interface Author { 
+    id: number;
+    username: string;
+    name: string;
+    state: string;
+    avatar_url: string;
+    web_url: string;
+}
+
 interface MergeRequestComment {
     type: string;
     body: string;
     attachment: null;
-    author: {
-        id: number;
-        username: string;
-        name: string;
-        state: string;
-        locked: boolean;
-        avatar_url: string;
-        web_url: string;
-    };
+    author: Author
     created_at: string;
     updated_at: string;
     system: boolean;

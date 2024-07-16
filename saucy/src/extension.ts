@@ -95,9 +95,9 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 
         Array.from(commentsList.entries())
             .filter(([_, comment]) => comment.position.new_path.split('/').pop() === relativePath)
-            .forEach(([_, { body, position }]) => {
+            .forEach(([_, { body, position, author }]) => {
                 const { start, end } = position.line_range;
-                DocumentDecorator.decorate(start.new_line, end.new_line, `${body} 🔥`);
+                DocumentDecorator.decorate(start.new_line, end.new_line, `${body} 🔥 - ${author.username}`);
             });
     };
 
