@@ -8,6 +8,8 @@ Run
 	```
 code --install-extension saucy-0.0.1.vsix
 	```
+ ![image](https://github.com/user-attachments/assets/75af40da-c2df-4df6-9e39-cf7f496827ee)
+
 # To Run Saucy:
 - Go to the run menu (cmd + shift + p on mac) and click on Saucy.
 - Now Saucy will start checking for new comments on  whichever branch you are on.
@@ -16,6 +18,7 @@ On a file that has comments, you will see a highlighted line over the lines that
 the code on this line will show the actual text of the comments.
 
 **Switching branches will auto check for the new branch.**
+
 
 
 # Contributors
