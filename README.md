@@ -10,7 +10,8 @@ code --install-extension saucy-0.0.1.vsix
 	```
 It should now look like this\
 \
- ![image](https://github.com/user-attachments/assets/75af40da-c2df-4df6-9e39-cf7f496827ee)
+![image](https://github.com/user-attachments/assets/66cf376b-3ddc-4f55-a503-744db0d35b87)
+
 
 # To Run Saucy:
 - Go to the run menu (cmd + shift + p on mac) and click on Saucy.
