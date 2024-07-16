@@ -8,3 +8,8 @@ export const CONFIG_USER_ACCESS_TOKEN: string = `${vscode.workspace.getConfigura
 export const CONFIG: { BASE_URL: string } = {
     BASE_URL: 'https://gitlab.com/',
 };
+
+export enum ApiErrors{
+    getAllMRs = 'getAllMRs',
+    currentMRNotes = 'currentMRNotes',
+}

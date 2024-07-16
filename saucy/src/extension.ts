@@ -1,12 +1,9 @@
 import * as vscode from 'vscode';
 import { GitService } from './services/git/git.service';
 import { GitLabService } from './services/gitlab/gitlab.service';
-import { CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN } from './shared/constants';
+import { ApiErrors, CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN } from './shared/constants';
 import { DocumentDecorator } from './models/editor/decorator';
 import { EventEmitter } from 'events';
-
-// user access token 'glpat-5Y_QwysY6Gjg2xStQLpz'
-// project id '34878733'
 
 const commentsUpdateEmitter = new EventEmitter();
 
@@ -27,7 +24,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
         (async function pingMergeRequest() {
             try {
                 const mergeRequests = await gitLabService.getAllMRs();
-                if (mergeRequests && mergeRequests !== "getAllMRsAPIEPICFAIL") {
+                if (mergeRequests && mergeRequests !== ApiErrors.getAllMRs) {
                     await gitController.getRepositoryInfo();
                     if (branch !== gitController.currentBranch) {
                         branch = gitController.currentBranch;
@@ -51,7 +48,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
             try {
                 if (mergeRequestID !== '') {
                     const comments = await gitLabService.currentMRNotes(mergeRequestID);
-                    if (comments && comments.length > 0 && comments !== "currentMRNotesAPIEPICFAIL") {
+                    if (comments && comments.length > 0 && comments !== ApiErrors.currentMRNotes) {
                         let shouldBatchEmitEvent = false;
                         comments.forEach((element: any) => {
                             if (element.type === "DiffNote" && element.resolvable) {

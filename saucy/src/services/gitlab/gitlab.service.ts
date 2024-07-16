@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CONFIG } from "../../shared/constants";
+import { ApiErrors, CONFIG } from "../../shared/constants";
 
 export class GitLabService {
     private _baseUrl: string;
@@ -23,7 +23,7 @@ export class GitLabService {
             }
         } catch (error) {
             console.error("Failed to get all Merge Requests", error);
-            throw new Error("getAllMRsAPIEPICFAIL");
+            throw new Error(ApiErrors.getAllMRs);
         }
     }
 
@@ -38,7 +38,7 @@ export class GitLabService {
             }
         } catch (error) {
             console.error("Failed to get current MR Notes", error);
-            throw new Error("currentMRNotesAPIEPICFAIL");
+            throw new Error(ApiErrors.currentMRNotes);
         }
     }
 }
