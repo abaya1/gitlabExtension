@@ -1,3 +1,7 @@
+interface MergeRequestElement {
+    source_branch: string;
+    iid: string;
+}
 interface PositionType {
     base_sha: string;
     start_sha: string;
@@ -23,7 +27,43 @@ interface PositionType {
     };
 }
 
-interface MergeRequestElement {
-    source_branch: string;
-    iid: string;
+interface MergeRequestComment {
+    type: string;
+    body: string;
+    attachment: null;
+    author: {
+        id: number;
+        username: string;
+        name: string;
+        state: string;
+        locked: boolean;
+        avatar_url: string;
+        web_url: string;
+    };
+    created_at: string;
+    updated_at: string;
+    system: boolean;
+    noteable_id: number;
+    noteable_type: string;
+    project_id: number;
+    commit_id: null;
+    position: PositionType;
+    resolvable: boolean;
+    resolved: boolean;
+    resolved_by: {
+        id: number;
+        username: string;
+        name: string;
+        state: string;
+        locked: boolean;
+        avatar_url: string;
+        web_url: string;
+    };
+    resolved_at: string;
+    confidential: boolean;
+    internal: boolean;
+    imported: boolean;
+    imported_from: string;
+    noteable_iid: number;
+    commands_changes: {};
 }

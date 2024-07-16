@@ -16,7 +16,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
     const gitController = new GitService();
     await gitController.init(context.subscriptions);
     let branch: string | undefined = '';
-    let commentsList = new Map<string, { resolved: string; position: PositionType }>();
+    let commentsList = new Map<string, MergeRequestComment>();
     let processComments = false;
 
     const gitLabService = new GitLabService(CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN);
@@ -62,7 +62,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
                                 } else {
                                     if (!element.resolved && !commentsList.has(element.id)) {
                                         vscode.window.showInformationMessage(`you have received a new comment 🤨 \n ${file}`);
-                                        commentsList.set(element.id, { resolved: element.resolved, position: element.position });
+                                        commentsList.set(element.id, element);
                                         processComments = true;
                                     }
                                 }
@@ -95,9 +95,9 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 
         Array.from(commentsList.entries())
             .filter(([_, comment]) => comment.position.new_path.split('/').pop() === relativePath)
-            .forEach(([_, { resolved, position }]) => {
+            .forEach(([_, { body, position }]) => {
                 const { start, end } = position.line_range;
-                DocumentDecorator.decorate(start.new_line, end.new_line, `text contennt ${_}`);
+                DocumentDecorator.decorate(start.new_line, end.new_line, `${body} 🔥`);
             });
     };
 
