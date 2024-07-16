@@ -23,50 +23,56 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
     const main = vscode.commands.registerCommand('saucy.startSaucy', async () => {
         let mergeRequestID: string = '';
 
-        const mrPing = setInterval(async () => {
-            const mergeRequests = await gitLabService.getAllMRs();
-            console.log('MRping comments',commentsList);
-            if (mergeRequests && mergeRequests !== "getAllMRsAPIEPICFAIL") {
-                await gitController.getRepositoryInfo();
-                if (branch !== gitController.currentBranch) {
-                    branch = gitController.currentBranch;
-                    mergeRequestID = '';
-                    commentsList.clear();
-                }
-                console.log(branch);
-                console.log(mergeRequests);
-                mergeRequests.forEach((element: any) => {
-                    if (element.source_branch === branch) {
-                        mergeRequestID = element.iid;
+        (async function pingMergeRequest() {
+            try {
+                const mergeRequests = await gitLabService.getAllMRs();
+                if (mergeRequests && mergeRequests !== "getAllMRsAPIEPICFAIL") {
+                    await gitController.getRepositoryInfo();
+                    if (branch !== gitController.currentBranch) {
+                        branch = gitController.currentBranch;
+                        mergeRequestID = '';
+                        commentsList.clear();
                     }
-                });
-            }
-
-        }, 10000);
-
-        const commentsPing = setInterval(async () => {
-            if (mergeRequestID !== '') {
-                const comments = await gitLabService.currentMRNotes(mergeRequestID);
-                console.log('comments:', comments);
-                if (comments && comments.length > 0 && comments !== "currentMRNotesAPIEPICFAIL") {
-                    comments.forEach((element: any) => {
-                        if (element.type === "DiffNote" && element.resolvable) {
-                            const file = element.position.new_path.split('/').pop();
-                            if (element.resolved && commentsList.has(element.id)) {
-                                commentsList.delete(element.id);
-                                vscode.window.showInformationMessage(`a comment has been resolved 🥵 \n ${file}`);
-                            } else {
-                                if (!element.resolved && !commentsList.has(element.id)) {
-                                    vscode.window.showInformationMessage(`you have received a new comment 🤨 \n ${file}`);
-                                    commentsList.set(element.id, { resolved: element.resolved, position: element.position });
-                                    commentsUpdateEmitter.emit('commentsUpdated');
-                                }
-                            }
+                    console.log('Branch: ', branch);
+                    mergeRequests.forEach((element: any) => {
+                        if (element.source_branch === branch) {
+                            mergeRequestID = element.iid;
                         }
                     });
                 }
+            } catch (error) {
+                console.error("Error fetching MRs:", error);
             }
-        }, 10000);
+            setTimeout(pingMergeRequest, 10000);
+        })();
+
+        (async function pingComments() {
+            try {
+                if (mergeRequestID !== '') {
+                    const comments = await gitLabService.currentMRNotes(mergeRequestID);
+                    if (comments && comments.length > 0 && comments !== "currentMRNotesAPIEPICFAIL") {
+                        comments.forEach((element: any) => {
+                            if (element.type === "DiffNote" && element.resolvable) {
+                                const file = element.position.new_path.split('/').pop();
+                                if (element.resolved && commentsList.has(element.id)) {
+                                    commentsList.delete(element.id);
+                                    vscode.window.showInformationMessage(`a comment has been resolved 🥵 \n ${file}`);
+                                } else {
+                                    if (!element.resolved && !commentsList.has(element.id)) {
+                                        vscode.window.showInformationMessage(`you have received a new comment 🤨 \n ${file}`);
+                                        commentsList.set(element.id, { resolved: element.resolved, position: element.position });
+                                        commentsUpdateEmitter.emit('commentsUpdated');
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }
+            } catch (error) {
+                console.error("Error fetching comments:", error);
+            }
+            setTimeout(pingComments, 10000);
+        })();
     });
 
     const highlight = vscode.commands.registerCommand('saucy.highlight', async () => {
