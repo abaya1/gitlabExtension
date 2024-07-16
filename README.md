@@ -3,6 +3,10 @@ Saucy is a VS code extension that integrates gitlab merge request comments into 
 After installing the extension, go to your extension settings and enter your gitlab access token and project ID.
 **Note that you only need read permissions for your access token. This token should be your personal token and not the repo token.**
 
+# To install:
+Run
+code --install-extension saucy-0.0.1.vsix
+
 # To Run Saucy:
 - Go to the run menu (cmd + shift + p on mac) and click on Saucy.
 - Now Saucy will start checking for new comments on  whichever branch you are on.
