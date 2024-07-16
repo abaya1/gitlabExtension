@@ -5,8 +5,9 @@ After installing the extension, go to your extension settings and enter your git
 
 # To install:
 Run
+	```
 code --install-extension saucy-0.0.1.vsix
-
+	```
 # To Run Saucy:
 - Go to the run menu (cmd + shift + p on mac) and click on Saucy.
 - Now Saucy will start checking for new comments on  whichever branch you are on.
