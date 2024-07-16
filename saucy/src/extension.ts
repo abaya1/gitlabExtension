@@ -35,7 +35,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
                         commentsList.clear();
                     }
                     console.log('Branch:', branch);
-                    mergeRequests.forEach((element: any) => {
+                    mergeRequests.forEach((element: MergeRequestElement) => {
                         if (element.source_branch === branch) {
                             mergeRequestID = element.iid;
                         }
@@ -87,14 +87,18 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
 
     const highlightComments = () => {
         const editor = vscode.window.activeTextEditor;
-        if (!editor) {return;}
-        const relativePath = vscode.workspace.asRelativePath(editor.document.uri.fsPath);
-        
-        const commentsPerFile = Array.from(commentsList.entries()).filter(comment => comment[1].position.new_path === relativePath);
-        
-        commentsPerFile.forEach(comment => {
-                DocumentDecorator.decorate(comment[1].position.line_range.start.new_line, comment[1].position.line_range.end.new_line);
-        });
+        if (!editor) {
+            return;
+        }
+
+        const relativePath = vscode.workspace.asRelativePath(editor.document.uri.fsPath).split('/').pop();
+
+        Array.from(commentsList.entries())
+            .filter(([_, comment]) => comment.position.new_path.split('/').pop() === relativePath)
+            .forEach(([_, { resolved, position }]) => {
+                const { start, end } = position.line_range;
+                DocumentDecorator.decorate(start.new_line, end.new_line, `text contennt ${_}`);
+            });
     };
 
     commentsUpdateEmitter.on('commentsUpdated', highlightComments);
@@ -103,6 +107,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
         DocumentDecorator.removeDecorations();
         highlightComments();
     });
+
     context.subscriptions.push(main);
 };
 

@@ -22,3 +22,8 @@ interface PositionType {
         };
     };
 }
+
+interface MergeRequestElement {
+    source_branch: string;
+    iid: string;
+}

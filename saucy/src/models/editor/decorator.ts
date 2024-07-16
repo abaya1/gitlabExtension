@@ -7,27 +7,31 @@ const highlightDecoration = vscode.window.createTextEditorDecorationType({
 
 //TODO not painting for multiple comments on same file
 export class DocumentDecorator {
-    private static _decoratedEditors = new Set<vscode.TextEditor>();
+    private static _decoratedEditors = new Map<vscode.TextEditor, vscode.DecorationOptions[]>();
 
-    public static decorate(startLine: number, endLine: number): void {
+    public static decorate(startLine: number, endLine: number, textContent: string): void {
         const activeEditor = vscode.window.activeTextEditor;
         if (!activeEditor || startLine <= 0 || endLine <= 0) {
             return;
         }
 
         const range = new vscode.Range(startLine - 1, 0, endLine - 1, Number.MAX_VALUE);
+        const decorationOption: vscode.DecorationOptions = {
+            range,
+            hoverMessage: textContent
+        };
 
-        activeEditor.setDecorations(highlightDecoration, [range]);
+        const existingDecorations = this._decoratedEditors.get(activeEditor) || [];
+        existingDecorations.push(decorationOption);
+        this._decoratedEditors.set(activeEditor, existingDecorations);
 
-        DocumentDecorator._decoratedEditors.add(activeEditor);
+        activeEditor.setDecorations(highlightDecoration, existingDecorations);
     }
 
     public static removeDecorations(): void {
-        DocumentDecorator._decoratedEditors.forEach(editor => {
+        this._decoratedEditors.forEach((_, editor) => {
             editor.setDecorations(highlightDecoration, []);
+            this._decoratedEditors.delete(editor);
         });
-        // DocumentDecorator._decoratedEditors.clear();
     }
 }
-
-
