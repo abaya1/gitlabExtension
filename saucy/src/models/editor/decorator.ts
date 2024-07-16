@@ -1,24 +1,33 @@
 import * as vscode from 'vscode';
 
+const highlightDecoration = vscode.window.createTextEditorDecorationType({
+    backgroundColor: 'rgba(123, 45, 67, 0.8)',
+    isWholeLine: true,
+});
+
+//TODO not painting for multiple comments on same file
 export class DocumentDecorator {
-   
-    private _editor: vscode.TextEditor | undefined;
+    private static _decoratedEditors = new Set<vscode.TextEditor>();
 
-    public decorate(startLine: number, endLine: number): void {
-        this._editor = vscode.window.activeTextEditor;
-
-        if(!this._editor || startLine <= 0 || endLine <= 0) {
+    public static decorate(startLine: number, endLine: number): void {
+        const activeEditor = vscode.window.activeTextEditor;
+        if (!activeEditor || startLine <= 0 || endLine <= 0) {
             return;
         }
-        const range = new vscode.Range(startLine - 1 , 0 , endLine - 1, Number.MAX_VALUE);
 
-        const highlightDecoration = vscode.window.createTextEditorDecorationType(<vscode.DecorationRenderOptions>{
-            backgroundColor: 'rgba(123, 45, 67, 0.8)', //TODO get colors from settings
-            isWholeLine : true
-        });
+        const range = new vscode.Range(startLine - 1, 0, endLine - 1, Number.MAX_VALUE);
 
-        this._editor.setDecorations(highlightDecoration, [range]);
+        activeEditor.setDecorations(highlightDecoration, [range]);
+
+        DocumentDecorator._decoratedEditors.add(activeEditor);
     }
 
-
+    public static removeDecorations(): void {
+        DocumentDecorator._decoratedEditors.forEach(editor => {
+            editor.setDecorations(highlightDecoration, []);
+        });
+        // DocumentDecorator._decoratedEditors.clear();
+    }
 }
+
+

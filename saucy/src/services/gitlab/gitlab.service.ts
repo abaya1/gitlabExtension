@@ -33,6 +33,7 @@ export class GitLabService {
                 headers: {'PRIVATE-TOKEN': this._userAccessToken}
             });
             if(response && response.data) {
+                console.log("Getting current MR Notes");
                 return response.data;
             }
         } catch (error) {

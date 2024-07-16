@@ -17,6 +17,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
     await gitController.init(context.subscriptions);
     let branch: string | undefined = '';
     let commentsList = new Map<string, { resolved: string; position: PositionType }>();
+    let processComments = false;
 
     const gitLabService = new GitLabService(CONFIG_REPO_ID, CONFIG_USER_ACCESS_TOKEN);
 
@@ -33,7 +34,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
                         mergeRequestID = '';
                         commentsList.clear();
                     }
-                    console.log('Branch: ', branch);
+                    console.log('Branch:', branch);
                     mergeRequests.forEach((element: any) => {
                         if (element.source_branch === branch) {
                             mergeRequestID = element.iid;
@@ -51,6 +52,7 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
                 if (mergeRequestID !== '') {
                     const comments = await gitLabService.currentMRNotes(mergeRequestID);
                     if (comments && comments.length > 0 && comments !== "currentMRNotesAPIEPICFAIL") {
+                        let shouldBatchEmitEvent = false;
                         comments.forEach((element: any) => {
                             if (element.type === "DiffNote" && element.resolvable) {
                                 const file = element.position.new_path.split('/').pop();
@@ -61,11 +63,19 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
                                     if (!element.resolved && !commentsList.has(element.id)) {
                                         vscode.window.showInformationMessage(`you have received a new comment 🤨 \n ${file}`);
                                         commentsList.set(element.id, { resolved: element.resolved, position: element.position });
-                                        commentsUpdateEmitter.emit('commentsUpdated');
+                                        processComments = true;
                                     }
                                 }
                             }
                         });
+                        if (processComments) {
+                            shouldBatchEmitEvent = true;
+                            processComments = false;
+                        }
+                        if (shouldBatchEmitEvent) {
+                            console.log('Emitting commentsUpdated event');
+                            commentsUpdateEmitter.emit('commentsUpdated');
+                        }
                     }
                 }
             } catch (error) {
@@ -75,19 +85,25 @@ export const activate = async (context: vscode.ExtensionContext): Promise<void> 
         })();
     });
 
-    const highlight = vscode.commands.registerCommand('saucy.highlight', async () => {
-        const decorator = new DocumentDecorator();
-        commentsList.forEach(comment => {
-            decorator.decorate(comment.position.line_range.start.new_line || 0, comment.position.line_range.end.new_line || comment.position.line_range.start.new_line);
+    const highlightComments = () => {
+        const editor = vscode.window.activeTextEditor;
+        if (!editor) {return;}
+        const relativePath = vscode.workspace.asRelativePath(editor.document.uri.fsPath);
+        
+        const commentsPerFile = Array.from(commentsList.entries()).filter(comment => comment[1].position.new_path === relativePath);
+        
+        commentsPerFile.forEach(comment => {
+                DocumentDecorator.decorate(comment[1].position.line_range.start.new_line, comment[1].position.line_range.end.new_line);
         });
-    });
+    };
 
-    commentsUpdateEmitter.on('commentsUpdated', () => {
-        vscode.commands.executeCommand('saucy.highlight');
-    });
+    commentsUpdateEmitter.on('commentsUpdated', highlightComments);
 
+    vscode.window.onDidChangeActiveTextEditor(() => {
+        DocumentDecorator.removeDecorations();
+        highlightComments();
+    });
     context.subscriptions.push(main);
-    context.subscriptions.push(highlight);
 };
 
 export const deactivate = (): void => { };
