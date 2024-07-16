@@ -14,9 +14,9 @@ the code on this line will show the actual text of the comments.
 
 
 # Contributors
-Arron Abay
-Juan Echevarria
-Tariq Shams
+- Arron Abay
+- Juan Echevarria
+- Tariq Shams
 
 
 
