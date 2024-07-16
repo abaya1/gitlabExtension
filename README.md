@@ -14,7 +14,9 @@ It should now look like this\
 
 
 # To Run Saucy:
-- Go to the run menu (cmd + shift + p on mac) and click on Saucy.
+- Go to the run menu (cmd + shift + p on mac) and click on Saucy.\
+![image](https://github.com/user-attachments/assets/1e81c756-364d-421a-a6ad-fc40c58b3517)
+
 - Now Saucy will start checking for new comments on  whichever branch you are on.
 A new comment will trigger a toast message indicating the file where the comment was made.
 On a file that has comments, you will see a highlighted line over the lines that were covered in the MR comment. Hovering over
