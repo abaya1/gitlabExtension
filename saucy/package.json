@@ -6,7 +6,7 @@
   "engines": {
     "vscode": "^1.91.0"
   },
-  "publisher":"TheBuolgogiBadBoys",
+  "publisher":"TheBuolgogiBeefBoys",
   "categories": [
     "Other"
   ],
@@ -19,11 +19,6 @@
     "configuration": {
       "title": "Saucy",
       "properties": {
-        "saucy.apiKey": {
-          "type": "string",
-          "default": "default value",
-          "description": "api key"
-        },
         "saucy.userAccessToken": {
           "type": "string",
           "default": "default value",
