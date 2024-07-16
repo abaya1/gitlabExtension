@@ -8,6 +8,8 @@ Run
 	```
 code --install-extension saucy-0.0.1.vsix
 	```
+It should now look like this\
+\
  ![image](https://github.com/user-attachments/assets/75af40da-c2df-4df6-9e39-cf7f496827ee)
 
 # To Run Saucy:
