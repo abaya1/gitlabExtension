@@ -10,7 +10,7 @@ A new comment will trigger a toast message indicating the file where the comment
 On a file that has comments, you will see a highlighted line over the lines that were covered in the MR comment. Hovering over
 the code on this line will show the actual text of the comments.
 
-**Switching branches will auto check for the new branch. **
+**Switching branches will auto check for the new branch.**
 
 
 
