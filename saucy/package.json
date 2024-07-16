@@ -2,10 +2,15 @@
   "name": "saucy",
   "displayName": "saucy comments",
   "description": "integrated gitlab comments ",
+  "icon": "images/bbb.png",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.91.0"
   },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/abaya1/gitlabExtension"
+	},
   "publisher":"TheBuolgogiBeefBoys",
   "categories": [
     "Other"
