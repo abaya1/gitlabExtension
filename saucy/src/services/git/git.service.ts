@@ -1,5 +1,7 @@
 import * as vscode from 'vscode';
 import { API, GitExtension, Repository } from './git';
+import { log } from '../../models/system/logger';
+import { DEBUG_MODE } from '../../shared/constants';
 
 export class GitService {
     private _gitApi: API | undefined;
@@ -15,8 +17,6 @@ export class GitService {
             return;
         }
         const uri = await this._gitApi.repositories[0];
-        console.log(uri);
-        console.log(this._gitApi)
         this._currentBranch = await this._getCurrentBranch(); 
         return;
     }

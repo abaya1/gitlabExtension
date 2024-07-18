@@ -129,7 +129,7 @@
             }
         },
         "resolvable": true,
-        "resolved": true,
+        "resolved": false,
         "resolved_by": {
             "id": 11244321,
             "username": "Erick.Wakayu",
@@ -973,7 +973,7 @@
             }
         },
         "resolvable": true,
-        "resolved": true,
+        "resolved": false,
         "resolved_by": {
             "id": 15312362,
             "username": "Tariq.Shams",
