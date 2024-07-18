@@ -1,15 +1,18 @@
-import * as vscode from 'vscode';
-
 export const CONFIG_NAME = 'saucy';
-export const CONFIG_REPO_ID: string = `${vscode.workspace.getConfiguration(CONFIG_NAME).get('repoID')}`;
-export const CONFIG_USER_ACCESS_TOKEN: string = `${vscode.workspace.getConfiguration(CONFIG_NAME).get('userAccessToken')}`;
 
-// All the plugin settings
 export const CONFIG: { BASE_URL: string } = {
     BASE_URL: 'https://gitlab.com/',
 };
 
-export enum ApiErrors{
-    getAllMRs = 'getAllMRs',
-    currentMRNotes = 'currentMRNotes',
+export enum API_ERRORS {
+    GET_ALL_MERGE_REQUESTS = 'getAllMRs',
+    CURRENT_MERGE_REQUEST_NOTES = 'currentMRNotes',
 }
+
+export enum LOG_LEVEL {
+    Info,
+    Warn,
+    Error,
+}
+
+export const DEBUG_MODE = true;
